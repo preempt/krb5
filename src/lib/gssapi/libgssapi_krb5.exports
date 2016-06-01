@@ -160,3 +160,6 @@ gss_acquire_cred_from
 gss_add_cred_from
 gss_store_cred_into
 gssint_g_seqstate_init
+gssint_g_verify_token_header
+acc_ctx_new
+release_spnego_ctx
