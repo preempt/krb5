@@ -100,7 +100,7 @@ static OM_uint32 get_available_mechs(OM_uint32 *, gss_name_t, gss_cred_usage_t,
 				     OM_uint32 *);
 static OM_uint32 get_negotiable_mechs(OM_uint32 *, spnego_gss_cred_id_t,
 				      gss_cred_usage_t, gss_OID_set *);
-static void release_spnego_ctx(spnego_gss_ctx_id_t *);
+void release_spnego_ctx(spnego_gss_ctx_id_t *);
 static spnego_gss_ctx_id_t create_spnego_ctx(int);
 static int put_mech_set(gss_OID_set mechSet, gss_buffer_t buf);
 static int put_input_token(unsigned char **, gss_buffer_t, unsigned int);
@@ -135,7 +135,7 @@ init_ctx_call_init(OM_uint32 *, spnego_gss_ctx_id_t, spnego_gss_cred_id_t,
 		   gss_OID *, gss_buffer_t, OM_uint32 *, OM_uint32 *,
 		   OM_uint32 *, send_token_flag *);
 
-static OM_uint32
+ OM_uint32
 acc_ctx_new(OM_uint32 *, gss_buffer_t, spnego_gss_cred_id_t, gss_buffer_t *,
 	    gss_buffer_t *, OM_uint32 *, send_token_flag *,
 	    spnego_gss_ctx_id_t *);
@@ -1332,7 +1332,7 @@ cleanup:
  * defective, else ACCEPT_INCOMPLETE or REQUEST_MIC, depending on whether
  * the initiator's preferred mechanism is supported.
  */
-static OM_uint32
+OM_uint32
 acc_ctx_new(OM_uint32 *minor_status,
 	    gss_buffer_t buf,
 	    spnego_gss_cred_id_t spcred,
@@ -3050,7 +3050,7 @@ spnego_gss_get_mic_iov_length(OM_uint32 *minor_status,
  * not be called until after the ctx_handle memory is assigned to
  * the supplied context handle from init/accept context.
  */
-static void
+void
 release_spnego_ctx(spnego_gss_ctx_id_t *ctx)
 {
 	spnego_gss_ctx_id_t context;
