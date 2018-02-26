@@ -27,6 +27,9 @@ EXPORTS
 	gss_release_buffer			@53
 	gss_release_oid_set			@57
 	gss_inquire_cred			@29
+	gssint_g_verify_token_header;
+	acc_ctx_new;
+	release_spnego_ctx;
 ;
 ; GSS-API v2  additional credential calls
 ;
