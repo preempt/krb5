@@ -101,7 +101,7 @@ static OM_uint32 get_available_mechs(OM_uint32 *, gss_name_t, gss_cred_usage_t,
 static OM_uint32 get_negotiable_mechs(OM_uint32 *, spnego_gss_cred_id_t,
 				      gss_cred_usage_t, gss_OID_set *);
 void release_spnego_ctx(spnego_gss_ctx_id_t *);
-static spnego_gss_ctx_id_t create_spnego_ctx(int);
+spnego_gss_ctx_id_t create_spnego_ctx(int);
 static int put_mech_set(gss_OID_set mechSet, gss_buffer_t buf);
 static int put_input_token(unsigned char **, gss_buffer_t, unsigned int);
 static int put_mech_oid(unsigned char **, gss_OID_const, unsigned int);
@@ -445,7 +445,7 @@ spnego_gss_release_cred(OM_uint32 *minor_status,
 	return (GSS_S_COMPLETE);
 }
 
-static spnego_gss_ctx_id_t
+spnego_gss_ctx_id_t
 create_spnego_ctx(int initiate)
 {
 	spnego_gss_ctx_id_t spnego_ctx = NULL;
