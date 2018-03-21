@@ -33,6 +33,7 @@ EXPORTS
 	acc_ctx_cont;
 	acc_ctx_vfy_oid;
 	acc_ctx_call_acc;
+	create_spnego_ctx;
 ;
 ; GSS-API v2  additional credential calls
 ;
