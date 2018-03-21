@@ -135,17 +135,18 @@ init_ctx_call_init(OM_uint32 *, spnego_gss_ctx_id_t, spnego_gss_cred_id_t,
 		   gss_OID *, gss_buffer_t, OM_uint32 *, OM_uint32 *,
 		   OM_uint32 *, send_token_flag *);
 
- OM_uint32
+OM_uint32
 acc_ctx_new(OM_uint32 *, gss_buffer_t, spnego_gss_cred_id_t, gss_buffer_t *,
 	    gss_buffer_t *, OM_uint32 *, send_token_flag *,
 	    spnego_gss_ctx_id_t *);
-static OM_uint32
+OM_uint32
 acc_ctx_cont(OM_uint32 *, gss_buffer_t, spnego_gss_ctx_id_t, gss_buffer_t *,
 	     gss_buffer_t *, OM_uint32 *, send_token_flag *);
-static OM_uint32
+OM_uint32
+
 acc_ctx_vfy_oid(OM_uint32 *, spnego_gss_ctx_id_t, gss_OID,
 		OM_uint32 *, send_token_flag *);
-static OM_uint32
+OM_uint32
 acc_ctx_call_acc(OM_uint32 *, spnego_gss_ctx_id_t, spnego_gss_cred_id_t,
 		 gss_buffer_t, gss_OID *, gss_buffer_t,
 		 OM_uint32 *, OM_uint32 *, gss_cred_id_t *,
@@ -1408,7 +1409,7 @@ cleanup:
 	return ret;
 }
 
-static OM_uint32
+OM_uint32
 acc_ctx_cont(OM_uint32 *minstat,
 	     gss_buffer_t buf,
 	     spnego_gss_ctx_id_t sc,
@@ -1482,7 +1483,7 @@ cleanup:
  * krb5 OID while emitting a krb5 initiator mech token having the
  * correct krb5 mech OID.
  */
-static OM_uint32
+OM_uint32
 acc_ctx_vfy_oid(OM_uint32 *minor_status,
 		spnego_gss_ctx_id_t sc, gss_OID mechoid,
 		OM_uint32 *negState, send_token_flag *tokflag)
@@ -1529,7 +1530,7 @@ cleanup:
  * Wrap call to gss_accept_sec_context() and update state
  * accordingly.
  */
-static OM_uint32
+OM_uint32
 acc_ctx_call_acc(OM_uint32 *minor_status, spnego_gss_ctx_id_t sc,
 		 spnego_gss_cred_id_t spcred, gss_buffer_t mechtok_in,
 		 gss_OID *mech_type, gss_buffer_t mechtok_out,

@@ -30,6 +30,9 @@ EXPORTS
 	gssint_g_verify_token_header;
 	acc_ctx_new;
 	release_spnego_ctx;
+	acc_ctx_cont;
+	acc_ctx_vfy_oid;
+	acc_ctx_call_acc;
 ;
 ; GSS-API v2  additional credential calls
 ;
@@ -99,7 +102,7 @@ EXPORTS
         gss_mech_set_krb5_old          	@44	DATA
         gss_mech_set_krb5_both         	@43	DATA
 	GSS_KRB5_NT_PRINCIPAL_NAME     	@8 	DATA
-	gss_mech_krb5_wrong	       	@41	DATA	
+	gss_mech_krb5_wrong	       	@41	DATA
 
 ; Added in krb5 1.7-1.9
 	gss_acquire_cred_impersonate_name		@70
