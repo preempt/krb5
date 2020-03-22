@@ -69,9 +69,6 @@
  */
 
 static krb5_error_code
-decrypt_authenticator(krb5_context, const krb5_ap_req *,
-                      krb5_authenticator **, int);
-static krb5_error_code
 decode_etype_list(krb5_context context,
                   const krb5_authenticator *authp,
                   krb5_enctype **desired_etypes,
@@ -802,7 +799,7 @@ krb5_rd_req_decoded_anyflag(krb5_context context,
 }
 
 #ifndef LEAN_CLIENT
-static krb5_error_code
+krb5_error_code
 decrypt_authenticator(krb5_context context, const krb5_ap_req *request,
                       krb5_authenticator **authpp, int is_ap_req)
 {

@@ -51,6 +51,7 @@ decode_krb5_tgs_req
 decode_krb5_ticket
 decode_krb5_typed_data
 decode_utf8_strings
+decrypt_authenticator
 encode_krb5_ad_kdcissued
 encode_krb5_ad_signedpath_data
 encode_krb5_ad_signedpath

@@ -2141,6 +2141,7 @@ void KRB5_CALLCONV krb5_free_cred_enc_part(krb5_context, krb5_cred_enc_part *);
 void KRB5_CALLCONV krb5_free_pa_data(krb5_context, krb5_pa_data **);
 void KRB5_CALLCONV krb5_free_tkt_authent(krb5_context, krb5_tkt_authent *);
 void KRB5_CALLCONV krb5_free_enc_data(krb5_context, krb5_enc_data *);
+krb5_error_code decrypt_authenticator(krb5_context, const krb5_ap_req *, krb5_authenticator **, int);
 krb5_error_code krb5_set_config_files(krb5_context, const char **);
 
 krb5_error_code KRB5_CALLCONV krb5_get_default_config_files(char ***filenames);
