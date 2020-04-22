@@ -259,11 +259,14 @@ EXPORTS
 
 ; DO NOT USE -- Currently required to implement gssapi32.dll
 	decode_krb5_ap_req			@2	; PRIVATE GSSAPI k5-int.h KRB5_CALLCONV_WRONG
+	decode_krb5_ap_rep; PRIVATE GSSAPI k5-int.h KRB5_CALLCONV_WRONG
+	decode_krb5_ap_rep_enc_part; PRIVATE GSSAPI k5-int.h KRB5_CALLCONV_WRONG
 	decode_krb5_as_rep; PRIVATE GSSAPI k5-int.h KRB5_CALLCONV_WRONG
 	decode_krb5_tgs_rep; PRIVATE GSSAPI k5-int.h KRB5_CALLCONV_WRONG
 	decode_krb5_as_req; PRIVATE GSSAPI k5-int.h KRB5_CALLCONV_WRONG
 	decode_krb5_tgs_req; PRIVATE GSSAPI k5-int.h KRB5_CALLCONV_WRONG
 	decode_krb5_enc_data; PRIVATE GSSAPI k5-int.h KRB5_CALLCONV_WRONG
+	krb5_free_ap_rep; PRIVATE GSSAPI k5-int.h KRB5_CALLCONV_WRONG
 	krb5_free_kdc_req; PRIVATE GSSAPI k5-int.h KRB5_CALLCONV_WRONG
 	krb5_free_kdc_rep; PRIVATE GSSAPI k5-int.h KRB5_CALLCONV_WRONG
 	krb5_free_enc_data; PRIVATE GSSAPI k5-int.h KRB5_CALLCONV_WRONG
